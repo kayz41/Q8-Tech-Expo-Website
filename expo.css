@@ -1,0 +1,518 @@
+/* =========================================================
+   UGANDA INTERNATIONAL COFFEE EXPO 2026
+   External stylesheet shared by all expo pages.
+   ========================================================= */
+
+/* Reset browser defaults and establish the expo colour palette. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --coffee-brown: #4E2D1E;
+    --coffee-dark: #2B190F;
+    --coffee-medium: #76513B;
+    --gold: #D4AF37;
+    --cream: #FFF9EF;
+    --paper: #FFFFFF;
+    --text: #302820;
+    --muted: #70665D;
+    --line: #E5D8C9;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.65;
+    color: var(--text);
+    background-color: var(--cream);
+}
+
+a {
+    color: inherit;
+}
+
+.section-container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+.eyebrow {
+    color: var(--coffee-medium);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+/* HOMEPAGE HERO */
+.hero {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    background-color: var(--coffee-dark);
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 30px 6%;
+    color: var(--paper);
+    text-align: center;
+    background: linear-gradient(rgba(25, 14, 8, 0.35), rgba(25, 14, 8, 0.78));
+}
+
+.hero-overlay .eyebrow {
+    color: var(--gold);
+}
+
+.hero-overlay h1 {
+    max-width: 950px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+    line-height: 1.12;
+}
+
+.hero-overlay h2 {
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    font-weight: 500;
+}
+
+/* BUTTONS */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.button-gold {
+    margin-top: 10px;
+    color: var(--coffee-dark);
+    background-color: var(--gold);
+}
+
+.button-gold:hover {
+    background-color: #E6C85B;
+}
+
+.button-outline {
+    color: var(--paper);
+    border-color: var(--gold);
+}
+
+.button-outline:hover {
+    color: var(--coffee-dark);
+    background-color: var(--gold);
+}
+
+.button-brown {
+    color: var(--paper);
+    background-color: var(--coffee-brown);
+}
+
+.button-brown:hover {
+    background-color: var(--coffee-dark);
+}
+
+/* HOMEPAGE INTRODUCTION */
+.intro {
+    padding-top: 65px;
+    padding-bottom: 45px;
+}
+
+.intro h2,
+.section-heading h2 {
+    margin: 5px 0 15px;
+    color: var(--coffee-brown);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.intro p:not(.eyebrow) {
+    max-width: 950px;
+    margin-top: 13px;
+    color: var(--muted);
+}
+
+/* KEY HIGHLIGHTS — FLEXBOX */
+.highlights {
+    padding-top: 25px;
+    padding-bottom: 75px;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.highlight-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.highlight-card {
+    flex: 1 1 210px;
+    min-height: 165px;
+    padding: 25px 18px;
+    border: 1px solid var(--line);
+    border-bottom: 5px solid #4E2D1E;
+    border-radius: 5px;
+    background-color: var(--paper);
+    text-align: center;
+}
+
+.highlight-number {
+    color: var(--gold);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.highlight-card h3 {
+    margin-top: 10px;
+    color: var(--coffee-brown);
+    font-size: 1rem;
+}
+
+/* HOMEPAGE CALLOUT */
+.callout {
+    padding: 42px 0;
+    color: var(--paper);
+    background-color: var(--coffee-brown);
+}
+
+.callout-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.callout .eyebrow {
+    color: var(--gold);
+}
+
+.callout h2 {
+    margin: 4px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+}
+
+.callout p:not(.eyebrow) {
+    color: #F0E5D9;
+}
+
+/* SECONDARY PAGE HEADERS AND NAVIGATION */
+.page-header {
+    padding: 42px 0 30px;
+    color: var(--paper);
+    background-color: var(--coffee-brown);
+}
+
+.page-header .eyebrow {
+    color: var(--gold);
+}
+
+.page-header h1 {
+    margin: 5px 0 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.page-header > div > p:not(.eyebrow) {
+    color: #F0E5D9;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+    margin-top: 22px;
+}
+
+.main-nav a {
+    padding-bottom: 4px;
+    color: var(--paper);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+}
+
+.page-content {
+    padding-top: 55px;
+    padding-bottom: 75px;
+}
+
+/* TABLES — PROGRAMME, SPEAKERS AND CALL FOR PAPERS */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 18px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(43, 25, 15, 0.07);
+}
+
+.expo-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--paper);
+    text-align: left;
+}
+
+.expo-table th,
+.expo-table td {
+    padding: 13px 15px;
+    border: 1px solid var(--line);
+    vertical-align: top;
+}
+
+.expo-table thead th {
+    color: var(--paper);
+    background-color: var(--coffee-brown);
+    font-weight: 700;
+}
+
+.expo-table tbody tr:nth-child(even) {
+    background-color: #F4EDE4;
+}
+
+.expo-table tbody tr:nth-child(odd) {
+    background-color: var(--paper);
+}
+
+.schedule-table {
+    min-width: 760px;
+}
+
+.schedule-table .day-heading th {
+    padding: 13px 16px;
+    color: var(--coffee-dark);
+    background-color: #EAD7A0;
+    font-size: 1.02rem;
+    text-align: left;
+}
+
+/* SPEAKERS PAGE — FLEXBOX CARDS */
+.speakers-section {
+    margin-bottom: 65px;
+}
+
+.speaker-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.speaker-card {
+    flex: 1 1 calc(50% - 25px);
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background-color: var(--paper);
+    box-shadow: 0 4px 15px rgba(43, 25, 15, 0.07);
+}
+
+.speaker-card img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.speaker-details {
+    padding: 20px;
+}
+
+.speaker-details h3 {
+    margin-bottom: 5px;
+    color: var(--coffee-brown);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+}
+
+.speaker-role {
+    color: var(--coffee-medium);
+    font-weight: 700;
+}
+
+.speaker-org {
+    margin-bottom: 12px;
+    color: var(--muted);
+    font-size: 0.92rem;
+    font-style: italic;
+}
+
+.speaker-details p:last-child {
+    color: var(--text);
+}
+
+/* ADDITIONAL SPEAKERS */
+.additional-speakers {
+    margin-bottom: 65px;
+}
+
+.additional-speakers .expo-table {
+    min-width: 680px;
+}
+
+/* CALL FOR PAPERS */
+.call-for-papers > p {
+    margin: 12px 0;
+    color: var(--muted);
+}
+
+.dates-heading {
+    margin-top: 28px;
+    color: var(--coffee-brown);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+}
+
+.status {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.status-closed {
+    color: #713B24;
+    background-color: #F1DFD2;
+}
+
+.status-complete {
+    color: #28543B;
+    background-color: #DDEBDD;
+}
+
+/* EXHIBITOR PLACEHOLDER PAGE */
+.placeholder-content {
+    min-height: 330px;
+}
+
+.placeholder-content h2 {
+    margin-bottom: 10px;
+    color: var(--coffee-brown);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.placeholder-content p {
+    margin-bottom: 22px;
+    color: var(--muted);
+}
+
+/* FOOTER */
+.site-footer {
+    padding: 28px 20px;
+    color: var(--paper);
+    background-color: var(--coffee-dark);
+    text-align: center;
+    font-size: 0.92rem;
+}
+
+.site-footer p + p {
+    margin-top: 4px;
+    color: #D9C9B9;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 22px;
+    margin-top: 15px;
+}
+
+.footer-nav a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 700px) {
+    .hero,
+    .hero-image {
+        height: 500px;
+    }
+
+    .hero-overlay h2 {
+        max-width: 500px;
+    }
+
+    .callout-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .speaker-card {
+        flex-basis: 100%;
+    }
+
+    .intro {
+        padding-top: 45px;
+    }
+
+    .page-content {
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-overlay {
+        padding: 20px 5%;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .hero-overlay h2 {
+        font-size: 0.95rem;
+    }
+
+    .highlight-card {
+        flex-basis: 100%;
+    }
+
+    .page-header {
+        padding-top: 30px;
+    }
+}
